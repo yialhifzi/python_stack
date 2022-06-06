@@ -53,7 +53,10 @@ dojo = {
     'instructors': ['Michael', 'Amy', 'Eduardo', 'Josh', 'Graham', 'Patrick', 'Minh', 'Devon']
 }
 
-def printDojoInfo(some_dict):
-    for x in some_dict:
-        print(len(some_dict[x]), some_dict[x])
-printDojoInfo(dojo)
+def printInfo(_dict):
+    for x in _dict:
+        print(len(_dict[x]),x.upper())
+        for i in _dict[x]:
+            print(i)
+        print("")
+printInfo(dojo)
