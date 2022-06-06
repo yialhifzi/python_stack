@@ -3,7 +3,7 @@ def randInt(min=0, max=100):
     # Lst=[]
     # for x in range (min,max+1):
     #     Lst.append(x)
-    num = random.random()*(max-min)+min
+    num = random.random()*(max-min)
     return round(num)
 
 
