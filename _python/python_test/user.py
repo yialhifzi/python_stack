@@ -6,9 +6,11 @@ class User:
 
     def make_deposit(self, amount):
         self.account_balance += amount
+        return self
 
     def make_withdrawal(self, amount):
         self.account_balance -= amount
+        return self
     
     def display_user_balance(self):
         print(self.name, self.account_balance)
@@ -24,20 +26,11 @@ monty = User("Monty Python", "monty@python.com")
 Adam = User("Adam Ahmed", "adam@python.com")
 
 
-guido.make_deposit(100)
-guido.make_deposit(200)
-guido.make_deposit(300)
-guido.make_withdrawal(200)
+guido.make_deposit(100).make_deposit(200).make_deposit(300).make_withdrawal(200)
 
-monty.make_deposit(300)
-monty.make_deposit(400)
-monty.make_withdrawal(300)
-monty.make_withdrawal(500)
+monty.make_deposit(300).make_deposit(400).make_withdrawal(300).make_withdrawal(500)
 
-Adam.make_deposit(9000)
-Adam.make_withdrawal(300)
-Adam.make_withdrawal(500)
-Adam.make_withdrawal(500)
+Adam.make_deposit(9000).make_withdrawal(300).make_withdrawal(500).make_withdrawal(500)
 
 guido.transfer_money(Adam,300)
 
