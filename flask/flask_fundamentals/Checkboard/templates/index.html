@@ -1,0 +1,28 @@
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+<style>
+    .box1{
+        background-color: {{color1}}
+    }
+    .box2{
+        background-color: {{color2}}
+    }
+</style>
+
+<div id="wrap">
+    <table CELLSPACING=0>
+        {% for i in range(0,x): %}
+        <tr>
+            {% for j in range(0,y): %}
+            <td class="box1"></td>
+            <td class="box2"></td>
+            {% endfor %}
+        </tr>
+        <tr>
+            {% for j in range(0,y): %}
+            <td class="box2"></td>
+            <td class="box1"></td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</div>

@@ -1,0 +1,12 @@
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+#wrapper{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+table tr td{
+    height: 45px;
+    width: 45px;
+}
