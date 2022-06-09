@@ -1,0 +1,18 @@
+h1 {
+    font-family: cursive;
+    text-align: center;
+    margin-top: 5%;
+}
+
+
+table th,
+td {
+    border: 1px solid lightgray;
+    border-collapse: collapse;
+}
+
+table {
+    width: 500px;
+    border-collapse: collapse;
+    text-align: left;
+}
