@@ -1,12 +1,28 @@
-from flask import Flask  # Import Flask to allow us to create our app
+from turtle import color
+from flask import Flask, render_template  # Import Flask to allow us to create our app
 # Create a new instance of the Flask class called "app"
 app = Flask(__name__)
 
 
-# The "@" decorator associates this route with the function immediately following
-@app.route('/')
+# # The "@" decorator associates this route with the function immediately following
+# @app.route('/')
+# def hello_world():
+#     return 'Hello Worlds!'  # Return the string 'Hello World!' as a response
+
+@app.route('/')                           
 def hello_world():
-    return 'Hello Worlds!'  # Return the string 'Hello World!' as a response
+    # Instead of returning a string, 
+    # we'll return the result of the render_template method, passing in the name of our HTML file
+    return render_template('index.html', phrase="hello", times=5)
+
+@app.route('/play', defaults={'num':1, 'color':'lightskyblue'}) 
+@app.route('/play/<num>', defaults={'color':'lightskyblue'}) 
+@app.route('/play/<num>/<color>')                          
+def playbox(num, color):
+    print(num)
+    print(color)
+    return render_template('play.html', num=int(num), color=color)
+
 
 @app.route('/Dojo!')
 def success():

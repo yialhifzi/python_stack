@@ -1,0 +1,29 @@
+<style>
+    h1{
+        font-family: cursive;
+        text-align: center;
+        margin-top: 5%;
+    }
+
+    #wrapper{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap
+    }
+
+    .box{
+        border: 5px black solid;
+        padding: 150px;
+        margin: 15px;
+        background-color: {{color}};
+    }
+</style>
+
+<h1>Welcome!</h1>
+
+<div id="wrapper">
+    {% for x in range(0,num): %}
+    <div class="box"></div>
+    {% endfor %}
+</div>
+
