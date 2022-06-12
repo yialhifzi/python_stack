@@ -1,0 +1,22 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dsurvey</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+
+<div id="wrapper">
+    <form action='/result' method='post'>
+        {% csrf_token %}
+        Your Name: <input type='text' name='name'>
+        <br>
+        Dojo Location: <input type='text' name='location'>
+        <br>
+        Favourite Language: <input type='text' name='favlang'>
+        <br>
+        Comment (optional): <input type='text' name='comment'>
+        <br>
+        <button type='submit'>Button</button>
+    </form>
+</div>

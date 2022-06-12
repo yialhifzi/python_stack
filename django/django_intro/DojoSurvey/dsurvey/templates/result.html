@@ -1,0 +1,16 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dsurvey result</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">    
+</head>
+
+
+<div id="wrapper">
+    <h2>Submitted Info:</h2>
+        <p>Name: {{ name_on_template }}</p>
+        <p>Dojo Location: {{ location_on_template }}</p>
+        <p>Favourite Language: {{ favlang_on_template }}</p>
+        <p>Comment: {{ comment_on_template }}</p>
+</div>
+
